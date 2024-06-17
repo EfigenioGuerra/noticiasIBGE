@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const params = new URLSearchParams(window.location.search);
             params.set('page', pagina);
-            const response = await fetch(`http://servicodados.ibge.gov.br/api/v3/noticias?${params}`);
+            const response = await fetch(`https://servicodados.ibge.gov.br/api/v3/noticias?${params}`);
 
             if (!response.ok) {
                 throw new Error(`Erro HTTP! status: ${response.status}`);
