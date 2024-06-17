@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+footer {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+main {
+    background-color: #f0f0f0;
+    max-width: 100ch;
+    margin: 0 auto;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+form#formularioBusca {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+}
+
+form#formularioBusca input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form#formularioBusca button {
+    position: absolute;
+    right: 0;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container-filtro {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-filtro svg {
+    fill: white;
+}
+
+.container-filtro #contagemFiltrosAtivos {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+ul#listaNoticias {
+    list-style: none;
+    padding: 0;
+}
+
+dialog#modalFiltro {
+    border: none;
+    padding: 32px;
+}
+
+dialog#modalFiltro form {
+    display: grid;
+    gap: 16px;
+    position: relative; /* Para posicionamento do botão "X" */
+}
+
+.campo-filtro {
+    display: flex;
+    flex-direction: column;
+}
+
+button#fecharModal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background: transparent;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (min-width: 760px) {
+    dialog#modalFiltro form {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+#paginacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+#paginacao button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    margin: 0 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#paginacao button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para Mobile */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    form#formularioBusca {
+        margin-top: 16px;
+        width: 100%;
+    }
+
+    header h1 {
+        margin-bottom: 8px;
+    }
+
+    .container-filtro {
+        margin-top: 16px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    #paginacao button {
+        padding: 8px;
+        margin: 0 2px;
+    }
+}
+
+
+h1 {
+    margin-right: 10px;
+}
+
+#iconeFiltro {
+    margin-left: 10px;
+}

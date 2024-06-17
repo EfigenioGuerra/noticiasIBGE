@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBGE News</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>IBGE News</h1>
+        <form id="formularioBusca">
+            <input type="text" id="inputBusca" placeholder="Buscar..." />
+            <button type="submit">🔍</button>
+        </form>
+        <div id="containerFiltro" class="container-filtro">
+            <svg id="iconeFiltro" width="20" height="20" fill="#000000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6a1 1 0 0 1 1-1h16a1 1 0 0 1 .707 1.707L14 12.414V20a1 1 0 0 1-1.447.894l-4-2A1 1 0 0 1 8 18v-5.586L3.293 6.707A1 1 0 0 1 3 6z"/>
+            </svg>
+            <span id="contagemFiltrosAtivos" style="position: absolute; top: 5px; right: 5px; background: red; color: white; border-radius: 50%; padding: 0.2em 0.5em;"></span>
+        </div>
+    </header>
+
+    <main>
+        <ul id="listaNoticias"></ul>
+        <div id="paginacao"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 IBGE News</p>
+    </footer>
+
+    <dialog id="modalFiltro">
+        <form id="formularioFiltro">
+            <h2>Filtros</h2>
+            <div class="campo-filtro">
+                <label for="quantidade">Quantidade</label>
+                <select id="quantidade" name="quantidade">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+            <div class="campo-filtro">
+                <label for="dataDe">De:</label>
+                <input type="date" id="dataDe" name="dataDe" />
+            </div>
+            <div class="campo-filtro">
+                <label for="dataAte">Até:</label>
+                <input type="date" id="dataAte" name="dataAte" />
+            </div>
+            <button type="button" id="fecharModal">X</button>
+            <button type="subait">Aplicar</button>
+        </form>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
