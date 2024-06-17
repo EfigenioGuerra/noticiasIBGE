@@ -80,12 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
             itemNoticia.innerHTML = `
                 ${urlImagem ? `<img src="${urlImagem}" alt="${item.titulo}">` : ''}
                 <h2>${item.titulo}</h2>
-                <p>${item.introducao} <a href="${item.link}" target="_blank">Leia Mais</a></p>
+                <p>${item.introducao} <button class="botao-leia-mais" link="${item.link}">Leia Mais</button></p>
+                <p>${formatarEditorias(item.editorias)}</p>
                 <p>Publicado ${formatarData(item.data_publicacao)}</p>
             `;
             listaNoticias.appendChild(itemNoticia);
         });
     }
+
+    listaNoticias.addEventListener('click', (event) => {
+        const botaoLeiaMais = event.target.closest('.botao-leia-mais');
+        if (botaoLeiaMais) {
+            const link = botaoLeiaMais.getAttribute('link');
+            if (link) {
+                window.open(link, '_blank');
+            }
+        }
+    });
 
     function formatarEditorias(editorias) {
         if (Array.isArray(editorias)) {

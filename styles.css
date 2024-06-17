@@ -88,7 +88,7 @@ dialog#modalFiltro {
 dialog#modalFiltro form {
     display: grid;
     gap: 16px;
-    position: relative; /* Para posicionamento do botão "X" */
+    position: relative;
 }
 
 .campo-filtro {
@@ -188,3 +188,22 @@ h1 {
 #iconeFiltro {
     margin-left: 10px;
 }
+
+.botao-leia-mais {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    float: right;
+}
+
+.botao-leia-mais:hover {
+    background-color: #0056b3;
+}
+
+
